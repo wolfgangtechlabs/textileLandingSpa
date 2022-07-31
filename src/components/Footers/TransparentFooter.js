@@ -26,14 +26,7 @@ function TransparentFooter() {
                 About Us
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                target="_blank"
-              >
-                Blog
-              </a>
-            </li>
+            
           </ul>
         </nav>
         <div className="copyright" id="copyright">

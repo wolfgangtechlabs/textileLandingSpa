@@ -10,7 +10,17 @@ import {
   Container,
   Row,
   Col,
+  CardImg,
+  CardTitle,
+  CardText,
+  CardSubtitle,
+  ListGroup,
+  ListGroupItem,
 } from "reactstrap";
+
+import dyesImage from "assets/img/dyes.jpg";
+import postprodImage from "assets/img/postprod.jpg";
+import linenImage from "assets/img/linen.jpg"
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
@@ -39,14 +49,16 @@ function LandingPage() {
         <div className="section section-about-us">
           <Container>
             <Row>
-              <Col className="ml-auto mr-auto text-center" md="8">
+              <Col id="about_us" className="ml-auto mr-auto text-center" md="8">
                 <h2 className="title">Who we are?</h2>
                 <h5 className="description">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record low maximum sea ice extent tihs year down
-                  to low ice extent in the Pacific and a late drop in ice extent
-                  in the Barents Sea.
+                Established in 1985, TS Jeans Care is a widely respected supplier of speciality chemicals and dyeing systems to the fashion garment industry in over fifty countries.
+                </h5>
+                <h5 className="description">              
+                We are pioneers in enzyme washing and biopolishing of garments, providing an unparalleled service to our customers globally. 
+                </h5>
+                <h5 className="description">
+                Originally specialists in denim, we also are experts in the finishing of garments of all constructions and weights of wovens, knitwear and jersey.
                 </h5>
               </Col>
             </Row>
@@ -58,22 +70,23 @@ function LandingPage() {
                     className="image-container image-left"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/login.jpg").default + ")",
+                        "url(" + require("assets/img/unsplash.jpg").default + ")",
                     }}
                   >
                     <p className="blockquote blockquote-info">
-                      "Over the span of the satellite record, Arctic sea ice has
-                      been declining significantly, while sea ice in the
-                      Antarctichas increased very slightly" <br></br>
-                      <br></br>
-                      <small>-NOAA</small>
+                    <small>Our Mission</small>
+                    <br></br>
+                    <br></br>
+                      "To fully support our customers through continuous development of
+                      technologically advanced products, systems and a commitment to 
+                      excellent customer service" 
                     </p>
                   </div>
                   <div
                     className="image-container"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg").default + ")",
+                        "url(" + require("assets/img/whitetextile.jpg").default + ")",
                     }}
                   ></div>
                 </Col>
@@ -82,142 +95,73 @@ function LandingPage() {
                     className="image-container image-right"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg1.jpg").default + ")",
+                        "url(" + require("assets/img/denim.jpg").default + ")",
                     }}
-                  ></div>
-                  <h3>
-                    So what does the new record for the lowest level of winter
-                    ice actually mean
-                  </h3>
-                  <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
-                  </p>
-                  <p>
-                    For a start, it does not automatically follow that a record
-                    amount of ice will melt this summer. More important for
-                    determining the size of the annual thaw is the state of the
-                    weather as the midnight sun approaches and temperatures
-                    rise. But over the more than 30 years of satellite records,
-                    scientists have observed a clear pattern of decline,
-                    decade-by-decade.
-                  </p>
-                  <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
-                  </p>
+                  >
+
+                  </div>
+                  
+                  <CardTitle tag="h3">
+                    So what does TS Textiles have to offer?
+                  </CardTitle>
+                  <br></br>
+                  <br></br>
+                  <CardSubtitle tag="h4">
+                  We deliver 
+                  </CardSubtitle>
+                  <br></br>
+                  <ListGroup>
+                    <ListGroupItem>High quality products</ListGroupItem>
+                    <ListGroupItem>Access to innovations developed in our in house development laboratory</ListGroupItem>
+                    <ListGroupItem>Chemicals tailored to customers specific requirements</ListGroupItem>
+                    <ListGroupItem>Problem solving: Trouble shooting on already finished garments</ListGroupItem>
+                    <ListGroupItem>Competitive pricing</ListGroupItem>
+                  </ListGroup>
+                  
+
                 </Col>
               </Row>
             </div>
           </Container>
         </div>
-        <div className="section section-team text-center">
+        <div id="services_section" className="section section-team text-center">
           <Container>
-            <h2 className="title">Here is our team</h2>
+            <h2 className="title">What we specialize in</h2>
             <div className="team">
               <Row>
-                <Col md="4">
+                <Col xl="4">
                   <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/avatar.jpg").default}
-                    ></img>
-                    <h4 className="title">Romina Hadid</h4>
-                    <p className="category text-info">Model</p>
-                    <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some{" "}
+                  <CardImg alt="..." src={dyesImage} top></CardImg>
+                    <CardTitle tag="h4">NATURAL DYES</CardTitle>
+                    <CardText>
+                    TS Jeans Care introduces our new dye system, Natural Earth Pigments.
+                    This range of earth and mineral pigments create beautiful washed down effects using colours the way nature intended{" "}
                       <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
+                        Read more...
                       </a>{" "}
-                      for people to be able to follow them outside the site.
-                    </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-facebook-square"></i>
-                    </Button>
+                    </CardText>
                   </div>
                 </Col>
-                <Col md="4">
+                <Col lg="4">
                   <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/ryan.jpg").default}
-                    ></img>
-                    <h4 className="title">Ryan Tompson</h4>
-                    <p className="category text-info">Designer</p>
-                    <p className="description">
+                  <CardImg alt="..." src={postprodImage} height="50%" top></CardImg>
+                    <CardTitle tag="h4">POST-PRODUCTION CARE</CardTitle>
+                    <CardText>
                       You can write here details about one of your team members.
                       You can give more details about what they do. Feel free to
                       add some{" "}
                       <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
+                        Read more...
                       </a>{" "}
-                      for people to be able to follow them outside the site.
-                    </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-linkedin"></i>
-                    </Button>
+                      
+                    </CardText>
                   </div>
                 </Col>
-                <Col md="4">
+                <Col lg="4">
                   <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/eva.jpg").default}
-                    ></img>
-                    <h4 className="title">Eva Jenner</h4>
-                    <p className="category text-info">Fashion</p>
-                    <p className="description">
+                    <CardImg alt="..." src={linenImage} top></CardImg>
+                    <CardTitle tag="h4">FLEXIFILL</CardTitle>
+                    <CardText>
                       You can write here details about one of your team members.
                       You can give more details about what they do. Feel free to
                       add some{" "}
@@ -225,38 +169,14 @@ function LandingPage() {
                         links
                       </a>{" "}
                       for people to be able to follow them outside the site.
-                    </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-google-plus"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-youtube"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
+                    </CardText>
                   </div>
                 </Col>
               </Row>
             </div>
           </Container>
         </div>
-        <div className="section section-contact-us text-center">
+        <div id="contact_us" className="section section-contact-us text-center">
           <Container>
             <h2 className="title">Want to work with us?</h2>
             <p className="description">Your project is very important to us.</p>

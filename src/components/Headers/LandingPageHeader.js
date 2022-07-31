@@ -23,18 +23,18 @@ function LandingPageHeader() {
   });
   return (
     <>
-      <div className="page-header page-header-small">
+      <div id="top_section" className="page-header page-header-small">
         <div
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/peafowl-1868.jpg").default + ")",
+              "url(" + require("assets/img/hector.jpg").default + ")",
           }}
           ref={pageHeader}
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title-up">TS Textiles & Co.</h1>
+            <h1 className="title-up">TS Jeans care india</h1>
           
           </Container>
         </div>

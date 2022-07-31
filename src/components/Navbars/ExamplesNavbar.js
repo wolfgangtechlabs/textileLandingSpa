@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Collapse,
@@ -7,7 +6,6 @@ import {
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
-  NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
@@ -66,35 +64,35 @@ function ExamplesNavbar() {
             </DropdownToggle>
             <DropdownMenu aria-labelledby="navbarDropdown">
               <DropdownItem header tag="a">
-                Dropdown header
+                MENU
+              </DropdownItem>
+              <DropdownItem href="#about_us">
+                ABOUT US
+              </DropdownItem>
+              <DropdownItem href="#services_section">
+                SERVICES
               </DropdownItem>
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                Action
-              </DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                Another action
-              </DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                Something else here
-              </DropdownItem>
-              <DropdownItem divider></DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                Separated link
+                GALLERY
               </DropdownItem>
               <DropdownItem divider></DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                One more separated link
+              <DropdownItem href="#contact_us" >
+               CONTACT US
+              </DropdownItem>
+              <DropdownItem divider></DropdownItem>
+              <DropdownItem href="https://tsjeanscare.wixsite.com/tsjeanscare" target="_blank">
+                TS JEANS UK
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
           <div className="navbar-translate">
-            <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/index?ref=nukr-examples-navbar"
+            {/* <NavbarBrand
+              href="#"
               target="_blank"
               id="navbar-brand"
             >
               MENU
-            </NavbarBrand>
+            </NavbarBrand> */}
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -116,12 +114,7 @@ function ExamplesNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink to="/" tag={Link}>
-                  Back to Home
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">
+                <NavLink href="#contact_us">
                   Get in touch
                 </NavLink>
               </NavItem>
