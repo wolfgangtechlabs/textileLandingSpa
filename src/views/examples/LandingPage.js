@@ -102,7 +102,7 @@ function LandingPage() {
                   </div>
                   
                   <CardTitle tag="h3">
-                    So what does TS Textiles have to offer?
+                    So what does TS Jeans have to offer?
                   </CardTitle>
                   <br></br>
                   <br></br>
